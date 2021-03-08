@@ -211,7 +211,7 @@ Practice accessing data above by console.log-ing following items:
 console.log(artists[0].name)
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log(artists[2[bio]])
+console.log(artists[2].bio)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -245,7 +245,7 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let newArray = []
   for(let i = 0; i < array.length; i++) {
-    if(array[i].years.includes('19')) {
+    if(array[i].years.substring(0,4) > 1899 && array[i].years.substring(0,4) < 2000) {
      newArray.push(array[i].name)
     }
   } 
@@ -309,7 +309,7 @@ function lotsOfArt(array){
   let newArray = []
   for(let i = 0; i < array.length; i++){
     if(array[i].paintings > 100){
-      newArray.push(array[i].names)
+      newArray.push(array[i].name)
     }
   }
   return newArray
